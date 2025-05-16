@@ -14,13 +14,10 @@ body {
   height: 300px;
   width: 100%;
   position: relative;
-  border-bottom-left-radius: 30px;
-  
-
 }
 
 .home-section {
-    margin-left: 150px;
+  margin-left: 150px;
 }
 
 .home-section h1 {
@@ -33,12 +30,10 @@ body {
   font-size: 70px;
   text-align: left;
   margin-top: 100px; 
+  margin-bottom: -120px;
   top:-160px;
   font-weight: 500;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-
-
-
 }
 
 .home-section p {
@@ -46,13 +41,49 @@ body {
     font-size: 15px;
     color:white;
     margin:0;
-    
-    
 }
 nav {
     display: none; /* j'ai masqué le menu comme ça on pourra le display avec js, mais il est tjr là don't worry*/
     position:fixed;
 }
 
+.selection-button{
+  background-color: #D6955B;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 15px 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+.selection-button:hover {
+  background-color: #C57A3D;
+  cursor: pointer;
+}
+.recipe-list {
+  margin-left: 150px;
+}
+.recipe-item{
+  background-color:#C9BBAE;
+  width: 300px;
+  padding: 20px;
+  border: 20px ;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  text-align: center;
+}
 
+.recipe-item img{
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #D9D9D9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
