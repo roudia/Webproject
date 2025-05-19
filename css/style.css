@@ -71,17 +71,19 @@ nav {
   background-color:#C9BBAE;
   width: 300px;
   padding: 20px;
+  padding-bottom: 5px;
   border: 20px ;
   border-radius: 20px;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  margin: 20px auto;
+  margin: 20px;
   text-align: center;
 }
 
 .recipe-item img{
+  object-fit : cover;
   width: 100%;
-  height: auto;
+  height: 150px;
   border-radius: 20px;
   border: 2px solid #D9D9D9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
