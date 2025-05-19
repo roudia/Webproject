@@ -59,6 +59,7 @@ nav {
   font-size: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
+  
 }
 .selection-button:hover {
   background-color: #C57A3D;
@@ -66,6 +67,7 @@ nav {
 }
 .recipe-list {
   margin-left: 150px;
+  flex-wrap: wrap;
 }
 .recipe-item{
   background-color:#C9BBAE;
@@ -85,5 +87,6 @@ nav {
   border-radius: 20px;
   border: 2px solid #D9D9D9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
 }
 
