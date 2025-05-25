@@ -336,3 +336,28 @@ body {
   color: #BBBBBB;
 }
 
+#ingredientInput {
+  border-radius : 10px;
+  border-color :#2F2F2F;
+
+}
+
+#researchbttn {
+  border-radius : 10px;
+  background-color:#C57A3D;
+  border-color:#a74f14;
+  color: beige;
+
+}
+
+#researchbttn:hover {
+  background-color: #4c2308;
+  cursor: pointer;
+}
+
+#morerecipes {
+  color:#151515;
+}
+
+
+
