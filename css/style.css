@@ -14,6 +14,7 @@ body {
   height: 300px;
   width: 100%;
   position: relative;
+  box-shadow: black;
 }
 
 .home-section {
@@ -150,3 +151,82 @@ nav {
   
 }
 
+/*                     side navigation bar style                     */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #90a4ae;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1001;
+}
+
+.sidebar a {
+  padding: 10px 25px;
+  display: block;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #78909c;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+}
+
+
+.openbtn {
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: beige;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.sidebar.active {
+  transform: translateX(0);
+}

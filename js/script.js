@@ -24,3 +24,33 @@ function displaysugar(){
 function displaydessert(){}
 
 function displaysavoury(){}
+
+/* diplay or hide nav bar in all */
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const sidebar = document.getElementById("sidebar");
+  const closeBtn = document.getElementById("closeBtn");
+  const overlay = document.getElementById("overlay");
+
+  menuToggle.addEventListener("click", function (e) {
+    e.stopPropagation(); // évite que le clic ferme aussitôt
+    sidebar.classList.add("active");
+    overlay.classList.add("visible");
+  });
+
+  closeBtn.addEventListener("click", function () {
+    closeMenu();
+  });
+
+  overlay.addEventListener("click", function () {
+    closeMenu();
+  });
+
+  function closeMenu() {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("visible");
+  }
+});
+

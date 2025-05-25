@@ -5,16 +5,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript" src="../js/script.js"></script>
     </head>
     <body>
-        <div class="hero-section">
-            <nav>
-            <a href="./Home.html">Home</a><br><br>
-            <a href="./Favorites.html">Favorites</a><br><br>
-            <a href="./Recipies.html">Recipes</a><br><br>
-            <a href="./AboutUs.html">About us</a><br><br>
-        </nav>
-        </div>
+
+        <header class="hero-section">
+            <button id="menuToggle" class="openbtn">☰</button>
+
+            <div id="overlay" class="overlay hidden"></div>
+
+            <div class="sidebar" id="sidebar">
+                <a href="#" class="closebtn" id="closeBtn">×</a>
+                <a href="./Home.html">Home</a>
+                <a href="./Favorites.html">Favorites</a>
+                <a href="./Recipies.html">Recipes</a>
+                <a href="./AboutUs.html">About Us</a>
+            </div>
+
+
+            
+            <script src="script.js"></script> 
+        </header>
+    
+    </body>
         <div class="home-section">
             <h1> GREENI HOME </h1> 
             <h2>WELCOME TO GREENI ! </h2><br><br> <p>Did you know that eating one avocado a day could improve your memory? A good excuse to try our guacamole recipes! <br><br>
