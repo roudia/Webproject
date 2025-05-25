@@ -23,7 +23,6 @@ body {
 }
 
 .home-section h1 {
-  
   position: relative;
   z-index: 1;
   border-top-left-radius: 20px;
@@ -39,29 +38,26 @@ body {
 }
 
 .home-section h2 {
-  
-  background-color:#0b1111c6;
-  border-radius:20px;
-  color:beige;
-  margin:0;
-  width: 300px;
-  margin-left: 100px;
-  margin-left:100px;
+  margin-top: -150px;
+  margin-bottom: -50px;
+  color:#49454F;
   justify-content: center;
   text-align: center;
+  font-size: 250%;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .home-section p {
-    text-align: left;
-    font-size: 17px;
-    color:beige;
-    margin:0;
-    padding: 10px;
-    border-radius: 20px;
-    left : -100x;
-    text-align: center;
-    background-color: #0b1111c6;
-    font-family: "inter", sans-serif;
+  text-align: center;
+  font-size: 17px;
+  color:#49454F;
+  padding: 30px;
+  border-radius: 20px;
+  left : -100x;
+  font-family: "inter", sans-serif;
+  border: 2px dashed #49454F ;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 nav {
     display: none; /* j'ai masqué le menu comme ça on pourra le display avec js, mais il est tjr là don't worry*/
@@ -90,7 +86,7 @@ nav {
   background-color: #C57A3D;
 }
 .recipe-list {
-  margin-left: 100px;
+  margin-left: 50px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -106,7 +102,40 @@ nav {
   margin: 20px;
   text-align: center;
 }
-
+.ingredients {
+  background-color:#4f7531c6;
+  padding: 10px;
+  padding-left: 40px;
+  padding-bottom: 5px;
+  border: 20px ;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  text-shadow:  2px 4px 10px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+  font-size: 17px;
+  color:white;
+  margin-top: 10px;
+  text-align: left;
+}
+.instructions {
+  background-color:#6d8959c6;
+  padding: 10px;
+  padding-left: 40px;
+  padding-bottom: 5px;
+  border: 20px ;
+  border-radius: 20px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+  font-size: 17px;
+  color: white;
+  text-shadow:  2px 4px 10px rgba(0, 0, 0, 0.3); ;
+  margin-top: 10px;
+  text-align: left;
+}
 .recipe-item img{
   object-fit : cover;
   width: 100%;

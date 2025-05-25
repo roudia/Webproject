@@ -1,5 +1,6 @@
 let activeFilters = [];
 
+/* Gestion des boutons appuyer */
 function toggleFilter(button) {
     const filter = button.dataset.filter;
 
@@ -14,6 +15,7 @@ function toggleFilter(button) {
     applyFilters();
 }
 
+/* Affichage des recettes */
 function applyFilters() {
     const items = document.querySelectorAll('.recipe-item');
 
