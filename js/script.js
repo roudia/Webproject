@@ -95,3 +95,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+/* api for searching recipies with leftovers */
+
+async function searchRecipes() {
+  const input = document.getElementById("ingredientInput").value;
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = "Loading...";
+
+  const apiKey = "00a78620c3e443feaef4bf451ea5cf63"; 
+  const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodeURIComponent(input)}&number=5&apiKey=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if (!Array.isArray(data)) {
+      resultsDiv.innerHTML = "Oh no something didn't work !";
+      return;
+    }
+
+    resultsDiv.innerHTML = ""; // reset
+
+    data.forEach(recipe => {
+      const recipeDiv = document.createElement("div");
+      recipeDiv.className = "recipe-item";
+      recipeDiv.innerHTML = `
+        <img src="${recipe.image}" alt="${recipe.title}" style="width:100%; border-radius: 10px;" />
+        <h3>${recipe.title}</h3>
+        <p>Missing ingredients : ${recipe.missedIngredientCount}</p>
+        <a href="https://spoonacular.com/recipes/${recipe.title.replaceAll(' ', '-')}-${recipe.id}" target="_blank">See recipy </a>
+      `;
+      resultsDiv.appendChild(recipeDiv);
+    });
+  } catch (error) {
+    resultsDiv.innerHTML = "Oh no something didn't work !";
+    console.error(error);
+  }
+}
+
