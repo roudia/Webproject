@@ -235,3 +235,18 @@ body {
 .sidebar.active {
   transform: translateX(0);
 }
+
+/*    favorite button style    */
+
+.favorite-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.favorite-btn.active {
+  color: rgb(190, 69, 69);
+}

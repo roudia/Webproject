@@ -24,11 +24,38 @@
 
             <script src="script.js"></script>
         </header>
-        
+
         <div class="home-section">
             
             <h1>Favorites</h1>
         </div>
+
+        <div class="recipe-list" id="favorites-list"></div>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("favorites-list");
+        const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+        if (favorites.length === 0) {
+            container.innerHTML = "<p>No favorites yet.</p>";
+            return;
+        }
+
+        favorites.forEach(recipe => {
+            const div = document.createElement("div");
+            div.className = "recipe-item";
+            div.innerHTML = `
+            <img src="${recipe.img}" alt="${recipe.title}">
+            <h2>${recipe.title}</h2>
+            `;
+            container.appendChild(div);
+        });
+        });
+        </script>
+
+
+
         
        
 
