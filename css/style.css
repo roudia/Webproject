@@ -39,7 +39,7 @@ body {
 
 .home-section h2 {
   margin-top: -150px;
-  margin-bottom: -50px;
+  margin-bottom: -30px;
   color:#49454F;
   justify-content: center;
   text-align: center;
@@ -55,7 +55,7 @@ body {
   border-radius: 20px;
   left : -100x;
   font-family: "inter", sans-serif;
-  border: 2px dashed #49454F ;
+  border: 2px solid #49454F ;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
