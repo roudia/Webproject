@@ -1,31 +1,30 @@
-let wasteToggleState = 0;
-let sugarToggleState = 0;
+let activeFilters = [];
 
-function displaywaste(){
-    const IDS = ["r1", "r3"];
-    const divs = document.querySelectorAll('.recipe-item');
+function toggleFilter(button) {
+    const filter = button.dataset.filter;
 
-    if (wasteToggleState === 0) {
-        divs.forEach(div => div.style.display = 'none');
-        IDS.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.style.display = 'block';
-        });
-        wasteToggleState = 1;
+    if (activeFilters.includes(filter)) {
+        activeFilters = activeFilters.filter(f => f !== filter); 
+        button.classList.remove('active');
     } else {
-        divs.forEach(div => div.style.display = 'block');
-        wasteToggleState = 0;
+        activeFilters.push(filter); 
+        button.classList.add('active');
     }
+
+    applyFilters();
 }
 
-function displaysugar(){
+function applyFilters() {
+    const items = document.querySelectorAll('.recipe-item');
+
+    items.forEach(item => {
+        const itemTypes = item.dataset.type.split(" ");
+        const shouldShow = activeFilters.length === 0 ||
+                           activeFilters.some(f => itemTypes.includes(f));
+
+        item.style.display = shouldShow ? 'block' : 'none';
+    });
 }
-
-function displaydessert(){}
-
-function displaysavoury(){}
-
-/* diplay or hide nav bar in all */
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
 
   menuToggle.addEventListener("click", function (e) {
-    e.stopPropagation(); // évite que le clic ferme aussitôt
+    e.stopPropagation(); 
     sidebar.classList.add("active");
     overlay.classList.add("visible");
   });

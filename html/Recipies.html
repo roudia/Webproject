@@ -28,27 +28,27 @@
         <div class="home-section">
             <h1>Recipes</h1>
             <div class="list-selection-recipe">
-                <button type="button" class="selection-button" id="b1" onclick=displaywaste()>Anti-waste</button>
-                <button type="button" class="selection-button" id="b2">Sugar-free</button>
-                <button type="button" class="selection-button" id="b3">Dessert</button>
-                <button type="button" class="selection-button" id="b4">Savoury</button>
+                <button type="button" class="selection-button" data-filter="waste" onclick=toggleFilter(this)>Anti-waste</button>
+                <button type="button" class="selection-button" data-filter="sugar" onclick=toggleFilter(this)>Sugar-free</button>
+                <button type="button" class="selection-button" data-filter="dessert" onclick=toggleFilter(this)>Dessert</button>
+                <button type="button" class="selection-button" data-filter="savoury" onclick=toggleFilter(this)>Savoury</button>
             </div>
         </div>
         <div class="recipe-list">
             <a href="Recipe1.html" style="text-decoration: none; color: inherit;">
-                <div class="recipe-item" id="r1">
+                <div class="recipe-item" data-type="waste">
                     <img src="../img/test.jpg" alt="Recipe 1">
                     <h2>Poke ball</h2>
                 </div>
             </a>
             <a href="Recipe2.html" style="text-decoration: none; color: inherit;">
-                <div class="recipe-item" id="r2">
+                <div class="recipe-item" data-type="waste sugar">
                     <img src="../img/test.jpg" alt="Recipe 2">
                     <h2>Poke</h2>
                 </div>
             </a>
             <a href="Recipe3.html" style="text-decoration: none; color: inherit;">
-                <div class="recipe-item" id="r3">
+                <div class="recipe-item" data-type="sugar">
                     <img src="../img/test.jpg" alt="Recipe 3">
                     <h2>Soup</h2>
                 </div>
