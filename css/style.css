@@ -425,7 +425,7 @@ body {
 
 }
 
-#researchbttn {
+.API button {
   border-radius : 10px;
   background-color:#C57A3D;
   border-color:#a74f14;
@@ -433,12 +433,12 @@ body {
 
 }
 
-#researchbttn:hover {
+.API button:hover {
   background-color: #4c2308;
   cursor: pointer;
 }
 
-#morerecipes {
+.API h2 {
   color:#151515;
 }
 
