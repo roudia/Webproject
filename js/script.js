@@ -54,3 +54,43 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
+/* gérer les boutons de favoris */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const favoriteButtons = document.querySelectorAll(".favorite-btn");
+  let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+  favoriteButtons.forEach(button => {
+    const recipe = button.closest(".recipe-item");
+    const recipeId = recipe.dataset.id;
+    const title = recipe.dataset.title;
+    const img = recipe.dataset.img;
+
+    
+    if (favorites.some(fav => fav.id === recipeId)) {
+      button.classList.add("active");
+      button.textContent = "❤";
+    }
+
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      favorites = JSON.parse(localStorage.getItem("favorites") || "[]"); // Recharger à chaque clic
+      const index = favorites.findIndex(fav => fav.id === recipeId);
+
+      if (index !== -1) {
+        // Supprimer
+        favorites.splice(index, 1);
+        button.classList.remove("active");
+        button.textContent = "♡";
+      } else {
+        // Ajouter
+        favorites.push({ id: recipeId, title, img });
+        button.classList.add("active");
+        button.textContent = "❤";
+      }
+
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    });
+  });
+});
