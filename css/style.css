@@ -281,3 +281,25 @@ body {
 .favorite-btn.active {
   color: rgb(190, 69, 69);
 }
+
+/*api style*/
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#results .recipe-item {
+  background-color: #C9BBAE;
+  padding: 13px;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+#results .recipe-item a {
+  text-decoration: none;
+  color: #333;
+}
