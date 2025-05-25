@@ -329,6 +329,119 @@ body {
   color: #333;
 }
 
+/* footer style */
+.site-footer {
+  background-color: #2F2F2F;
+  color: #F1F1F1;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #D6955B;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  margin: 0;
+  font-size: 13px;
+  color: #BBBBBB;
+}
+
+#ingredientInput {
+  border-radius : 10px;
+  border-color :#2F2F2F;
+
+}
+
+#researchbttn {
+  border-radius : 10px;
+  background-color:#C57A3D;
+  border-color:#a74f14;
+  color: beige;
+
+}
+
+#researchbttn:hover {
+  background-color: #4c2308;
+  cursor: pointer;
+}
+
+#morerecipes {
+  color:#151515;
+}
+
+
+
+
+/* footer style */
+.site-footer {
+  background-color: #2F2F2F;
+  color: #F1F1F1;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #D6955B;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  margin: 0;
+  font-size: 13px;
+  color: #BBBBBB;
+}
+
+#ingredientInput {
+  border-radius : 10px;
+  border-color :#2F2F2F;
+
+}
+
+#researchbttn {
+  border-radius : 10px;
+  background-color:#C57A3D;
+  border-color:#a74f14;
+  color: beige;
+
+}
+
+#researchbttn:hover {
+  background-color: #4c2308;
+  cursor: pointer;
+}
+
+#morerecipes {
+  color:#151515;
+}
+
 .API {
   margin-left: 100px;
 }
