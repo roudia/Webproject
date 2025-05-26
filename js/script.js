@@ -134,3 +134,20 @@ async function searchRecipes() {
   }
 }
 
+/* newletter subscription message */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("newsletter-form");
+  const message = document.getElementById("newsletter-message");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      // You can add backend or API call here
+      message.textContent = "Thank you for subscribing! 🥳";
+      form.reset();
+    });
+  }
+});
+
+
