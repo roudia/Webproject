@@ -460,10 +460,9 @@ body {
 /* newsletter style */
 
 .newsletter-section {
-  background-color: #C9BBAE;
+  background-color: #847a7192;
   padding: 40px 20px;
   text-align: center;
-  border-top: 4px solid #D6955B;
   font-family: "Inter", sans-serif;
 }
 
