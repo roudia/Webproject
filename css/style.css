@@ -184,7 +184,7 @@ nav {
   border-radius: 20px;
   display:inline-block;
   width: 300px;
-  height:210px;
+  height:230px;
   padding: 20px;
   font-size :small;
   text-align: right;
@@ -200,6 +200,17 @@ nav {
   justify-content: space-between;
   margin-left:100px;
   margin-right:100px;
+  
+}
+
+#home-articles a {
+  text-decoration:none;
+  color:#151515;
+}
+
+#home-articles a:hover {
+  color:#030200;
+  text-decoration:underline;
 }
 
 .article img {
