@@ -1,6 +1,5 @@
 let activeFilters = [];
 
-/* Gestion des boutons appuyer */
 function toggleFilter(button) {
     const filter = button.dataset.filter;
 
@@ -15,7 +14,6 @@ function toggleFilter(button) {
     applyFilters();
 }
 
-/* Affichage des recettes */
 function applyFilters() {
     const items = document.querySelectorAll('.recipe-item');
 
@@ -55,9 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-/* gérer les boutons de favoris */
-
 document.addEventListener("DOMContentLoaded", function () {
   const favoriteButtons = document.querySelectorAll(".favorite-btn");
   let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
@@ -67,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const recipeId = recipe.dataset.id;
     const title = recipe.dataset.title;
     const img = recipe.dataset.img;
-
+    const ref = recipe.dataset.ref;
     
     if (favorites.some(fav => fav.id === recipeId)) {
       button.classList.add("active");
@@ -80,13 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const index = favorites.findIndex(fav => fav.id === recipeId);
 
       if (index !== -1) {
-        // Supprimer
         favorites.splice(index, 1);
         button.classList.remove("active");
         button.textContent = "♡";
       } else {
-        // Ajouter
-        favorites.push({ id: recipeId, title, img });
+        favorites.push({ id: recipeId, title, img, ref });
         button.classList.add("active");
         button.textContent = "❤";
       }
@@ -95,6 +88,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const todoButtons = document.querySelectorAll(".todo-btn");
+  let todos = JSON.parse(localStorage.getItem("todos") || "[]");
+
+  todoButtons.forEach(button => {
+    const recipe = button.closest(".recipe-item");
+    const recipeId = recipe.dataset.id;
+    const title = recipe.dataset.title;
+    const img = recipe.dataset.img;
+    const ref = recipe.dataset.ref;
+
+    if (todos.some(todo => todo.id === recipeId)) {
+      button.classList.add("active");
+      button.textContent = "★"; 
+    } else {
+      button.textContent = "☆"; 
+    }
+
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      todos = JSON.parse(localStorage.getItem("todos") || "[]");
+      const index = todos.findIndex(todo => todo.id === recipeId);
+
+      if (index !== -1) {
+        todos.splice(index, 1);
+        button.classList.remove("active");
+        button.textContent = "☆";  
+      } else {
+        // Ajouter
+        todos.push({ id: recipeId, title, img, ref });
+        button.classList.add("active");
+        button.textContent = "★";  
+      }
+
+      localStorage.setItem("todos", JSON.stringify(todos));
+    });
+  });
+});
+
 
 /* api for searching recipies with leftovers */
 
