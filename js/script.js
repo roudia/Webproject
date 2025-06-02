@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.classList.remove("active");
         button.textContent = "☆";  
       } else {
-        // Ajouter
+        // add
         todos.push({ id: recipeId, title, img, ref });
         button.classList.add("active");
         button.textContent = "★";  
@@ -136,7 +136,7 @@ async function searchRecipes() {
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "Loading...";
 
-  const apiKey = "00a78620c3e443feaef4bf451ea5cf63"; 
+  const apiKey = "00a78620c3e443feaef4bf451ea5cf63"; //i took an exter,al api from spoonacular
   const url = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${encodeURIComponent(input)}&number=5&apiKey=${apiKey}`;
 
   try {
@@ -154,7 +154,7 @@ async function searchRecipes() {
       const recipeDiv = document.createElement("div");
       recipeDiv.className = "recipe-item";
       recipeDiv.innerHTML = `
-        <img src="${recipe.image}" alt="${recipe.title}" style="width:100%; border-radius: 10px;" />
+        <img src="${recipe.image}" alt="${recipe.title}" style="width:100%; border-radius: 10px;">
         <h3>${recipe.title}</h3>
         <p>Missing ingredients : ${recipe.missedIngredientCount}</p>
         <a href="https://spoonacular.com/recipes/${recipe.title.replaceAll(' ', '-')}-${recipe.id}" target="_blank">See recipy </a>

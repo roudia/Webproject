@@ -14,7 +14,7 @@ body {
   height: 300px;
   width: 100%;
   position: relative;
-  box-shadow: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .home-section {
@@ -53,7 +53,7 @@ body {
   color:#49454F;
   padding: 30px;
   border-radius: 20px;
-  left : -100x;
+  left : -100px;
   font-family: "inter", sans-serif;
   border: 2px solid #49454F ;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
@@ -395,9 +395,6 @@ body {
   color:#151515;
 }
 
-
-
-
 /* footer style */
 .site-footer {
   background-color: #2F2F2F;
@@ -518,3 +515,41 @@ body {
 .todo-btn.active {
   color:gold;
 }
+
+.article-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Inter", sans-serif;
+    }
+    
+.article-container h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+    }
+
+.article-container p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 10px 0;
+  color: #444;
+    }
+
+.article-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+    }
+
+.article-container h2 {
+  color: #C57A3D;
+  margin-top: 30px;
+    }
+
+footer {
+  margin-top: 50px;
+    }
