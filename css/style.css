@@ -553,3 +553,11 @@ body {
 footer {
   margin-top: 50px;
     }
+
+.github-logo {
+  width: 75px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+
