@@ -11,6 +11,6 @@ ambre.berdery@efrei.net
 judia.ouazari@efrei.net
 
 This website can be open on IOS or Android, Windows devices.
-Check the privacy of your connection before using the API to research recipes. 
+BE CAREFUL : Ensure your connetion is private before entering the website, some functionalities (API) or even the entire website couldn't work otherwise. 
 
 Enjoy Greeni and Bon Appétit !
